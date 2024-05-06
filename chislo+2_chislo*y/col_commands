@@ -1,0 +1,13 @@
+
+def calk(begin, end, command):
+#добавляем новый аргумент в функции
+    if begin > end:
+        return 0
+    if begin == end and command == 7:
+        #здесь мы считаем кол-во программ где всего 7 комманд
+        return 1
+    if command > 7:
+        return 0
+    return calk(begin + 1, end, command+1) + calk(begin *2, end, command+1) + calk(begin +4, end, command+1)
+#прибавляем + 1 к комманде
+print(calk(3,27, 0))
