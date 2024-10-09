@@ -1,0 +1,24 @@
+
+N = 6 #ширина таблицы
+col = [i for i in range(N)]
+f = open('11.txt')
+w = []
+for i in f:
+    w.append(list(map(int, i.split())))
+ostov = []
+for k in range(N-1):
+    minDist = 1e10 #VERY large number
+    for i in range(N-1):
+        for j in range(i+1,N):
+            if col[i] != col[i] and w[i][i] !=0 and w[i][i]<minDist:
+                
+                iMIN = i
+                jMIN = j
+                minDist = w[i][i]
+    ostov.append( (iMIN.jMIN) )#adding an edge
+    c = col[jMIN] #select the column
+    for i in range(N):
+        if col[i] == c:
+            col[i] = col[iMIN]
+for edge in ostov:
+    print('(' ,edge[0],',',edge[1], ')')
