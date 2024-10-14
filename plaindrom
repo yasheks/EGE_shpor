@@ -1,0 +1,16 @@
+n = int(input())
+stroka = ""
+fl = True
+for i in range(n):
+    chis = hex(int(input()))[2::]
+    stroka+= chis
+for i in range(len(stroka)-1):
+
+    if stroka[i] != stroka[-(i+1)]:
+       fl = False
+if fl:
+    print(1)
+    print(stroka)
+else:
+    print(0)
+    print(stroka)
