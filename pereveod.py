@@ -1,9 +1,8 @@
-def f7(n):
-    st = ""
-    while n > 0:
-        zef = n%7
-        n //=7
-        st = str(zef) + st
-    return st
-
-#перевод в 7 систему счисления
+def from10_ToAny(n, q): # n - число, q - система счисления
+    ans = ''
+    alp = "0123456789abcdefghikjklmnopqrstuvwxyz"
+    while n:
+        ans = alp[n%q] + ans
+        n //= q
+    return ans
+print(from10_ToAny(4, 2))
