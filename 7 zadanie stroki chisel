@@ -1,0 +1,13 @@
+f = open("9-194.csv")
+k = 0
+for i in f:
+    s = list(map(int, i.split(";")))
+    povt = [x for x in s if s.count(x) >= 2] 
+    chet = [x for x in s if x%2 == 0] 
+    nechet = [x for x in s if x%2 != 0]
+    if len(povt) == 0:
+        if len(chet) > len(nechet):
+            if sum(chet) > sum(nechet):
+                print(s, povt, chet, nechet)
+                k+=1
+print(k)
