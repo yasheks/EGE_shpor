@@ -6,3 +6,5 @@ def from10_ToAny(n, q): # n - число, q - система счисления
         n //= q
     return ans
 print(from10_ToAny(4, 2))
+
+#ТОЛЬКО ПОЛОЖИТЕЛЬНЫЕ ИЛИ МОДУЛЬ
